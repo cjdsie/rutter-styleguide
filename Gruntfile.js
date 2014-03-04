@@ -13,14 +13,14 @@ module.exports = function(grunt) {
 			dev: {                              // Another target
 				options: {
 					style: 'compacted',                      // Dictionary of render options
-					includePaths: ['stylesheets', 'admin/','patterns/', 'optional/']
+					includePaths: ['css', 'css/admin/','css/patterns/', 'css/optional/']
 				}
 			}
 		},
 		uglify: {
 			build: {
-				src: 'js/pattern.js',
-				dest: 'js/pattern.min.js'
+				src: 'js/plugins.js',
+				dest: 'js/plugins.min.js'
 			}
 		},
 		cssmin: {
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
 				separator: ';'
 			},
 			js: {
-				src: ['js/classie.js', 'js/pattern.js'],
+				src: ['js/plugins.min.js'],
 				dest: 'js/pattern.min.js'
 			}
 		},

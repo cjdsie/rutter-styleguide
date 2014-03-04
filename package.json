@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "private": true,
   "description": "A living document of Responsive Deliverables",
-  "homepage": "https://github.com/cjdsie/pattern-portfolio",
+  "homepage": "https://github.com/cjdsie/rutter-styleguide",
   "author": "Chris Da Sie <chris@chrisdasie.com> (http://chrisdasie.com)",
   "keywords": ["components", "css", "framework", "ui", "patterns"],
   "dependencies": {
@@ -20,11 +20,11 @@
     "grunt-contrib-watch": "~0.5.3"
   },
   "support": {
-    "issues": "https://github.com/cjdsie/pattern-portfolio/issues/"
+    "issues": "https://github.com/cjdsie/rutter-styleguide/issues/"
   },
   "repository": { 
     "type" : "git", 
-    "url" : "https://github.com/cjdsie/pattern-portfolio.git"
+    "url" : "https://github.com/cjdsie/rutter-styleguide.git"
   },
   "license": "http://chrisdasie.mit-license.org"
 }

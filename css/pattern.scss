@@ -1,4 +1,4 @@
-@import "admin/normalize","variables", "mixins", "patterns/transitions", "patterns/typography", "patterns/grid", "patterns/images", "patterns/avatars", "patterns/lists", "patterns/links", "patterns/blockquotes", "admin/admin-styles";
+@import "admin/normalize","variables", "mixins", "patterns/transitions", "patterns/typography", "patterns/grid", "patterns/images", "patterns/avatars", "patterns/lists", "patterns/links", "patterns/blockquotes", "admin/admin-styles", "admin/prism";
 
 *{
   @include border-box;

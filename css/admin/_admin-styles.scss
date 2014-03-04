@@ -1,4 +1,4 @@
-@import "admin-variables", "prism";
+@import "admin-variables";
 
 *{
   @include border-box;
@@ -285,20 +285,19 @@ body {
 	  color: $admin-color-green;
 	  cursor: pointer;
 	}
-	.pattern-markup {
+	pre[class*="language-"]{
 	  background-color: $white;
-	  border: 1px solid $admin-color-beige;
-	  @include column(8);
-	  display: block;
-	  font-size: 12px;
-	  overflow-y: scroll;
-	  max-height: 200px;
-	  padding: 1em 2%;
-	  margin: 1em 0;
-	  word-wrap: break-word;
+	  @include column(12);
+	  @media(min-width: 50em){
+	    @include column(8);
+	  }
 	}
-	.pattern-markup, :not(pre) > code[class*="language-"] {
-	  padding: 1em 2% !important;
+	.usage{
+	  @include column(12);
+	  @media(min-width: 50em) {
+	    @include column(4);
+	  }
+	  
 	}
 	.pattern-preview{
 	  padding: ($base-unit * 2);
