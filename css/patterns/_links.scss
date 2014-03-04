@@ -1,0 +1,21 @@
+/* Links
+--------------------------------------------------*/
+
+a {
+  color: $default-link;
+  text-decoration: none;
+  outline: 0;
+  &:visited {
+    color: $default-link;
+    text-decoration: underline;
+    outline: 0;
+  }
+  &:hover{
+    text-decoration: underline;
+  }
+  @include hoverActiveFocus(color, $default-link-hover);
+  &[rel="external"], &[href*="//"]:not([href*="mysite.com"]), &[href*="?referer"] {
+    color: $default-link;
+    /* external link styles, use :before or :after if you want! */
+  }
+}

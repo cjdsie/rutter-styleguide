@@ -1,0 +1,9 @@
+// declare non-grid-related styles for your elements ============================================= /
+section div {
+  padding: ($base-unit * 3) 0;
+}
+
+.hero {
+  height: $vertical-measure * 10;
+  background-color: $black-60;
+}
