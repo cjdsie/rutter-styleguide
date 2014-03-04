@@ -748,6 +748,60 @@ ol {
       .event-listing li .event-info a {
         float: right; }
 
+.thumbnail-listing {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  *zoom: 1; }
+  .thumbnail-listing:before, .thumbnail-listing:after {
+    content: "";
+    display: table; }
+  .thumbnail-listing:after {
+    clear: both; }
+  .thumbnail-listing li {
+    display: inline;
+    float: left;
+    width: 97.91667%;
+    margin: 0 1.04167%;
+    margin-bottom: 12px;
+    position: relative; }
+    @media (min-width: 50em) {
+      .thumbnail-listing li {
+        display: inline;
+        float: left;
+        width: 12.16667%;
+        margin: 0 1.04167%;
+        margin-bottom: 12px; } }
+    .thumbnail-listing li .cutoff-image:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.5);
+      -moz-transition: background .3s linear;
+      -webkit-transition: background .3s linear;
+      -o-transition: background .3s linear;
+      transition: background .3s linear;
+      z-index: 1; }
+    .thumbnail-listing li .cutoff-image:after {
+      z-index: 10; }
+    .thumbnail-listing li img {
+      position: relative; }
+    .thumbnail-listing li h4 {
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: auto;
+      position: absolute;
+      color: white;
+      text-transform: none;
+      margin: 0;
+      padding-right: 5%;
+      z-index: 10; }
+
 /* Links
 --------------------------------------------------*/
 a {
@@ -765,7 +819,14 @@ a {
   a[rel="external"], a[href*="//"]:not([href*="mysite.com"]), a[href*="?referer"] {
     color: #1999ce;
     /* external link styles, use :before or :after if you want! */ }
+  a:active {
+    color: #23628e;
+    text-decoration: underline; }
 
+/************************
+*****    Buttons   ******
+**** Version: 0.0.1 *****
+*************************/
 /************************
 ****** Blockquotes *******
 **** Version: 0.0.1 *****
@@ -1452,3 +1513,199 @@ ul, ol, dd,
 p, figure,
 pre, table, fieldset, hr {
   margin-bottom: 24px; }
+
+/* Buttons
+===================================*/
+button, .button, input[type="button"], input[type="submit"] {
+  border-style: solid;
+  border-width: 1px;
+  cursor: "pointer";
+  font-family: inherit;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0 0 1.25em;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: all, 0.2s ease-in-out;
+  -moz-transition: all, 0.2s ease-in-out;
+  -ms-transition: all, 0.2s ease-in-out;
+  -o-transition: all, 0.2s ease-in-out;
+  transition: all, 0.2s ease-in-out;
+  display: inline-block;
+  padding-top: 0.75em;
+  padding-right: 1.5em;
+  padding-bottom: 0.8125em;
+  padding-left: 1.5em;
+  font-size: 1em;
+  background-color: #1999ce;
+  border-color: #1377a1;
+  color: white;
+  -webkit-border-radius: 1px;
+  border-radius: 1px; }
+  button:hover, button:focus, .button:hover, .button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+    background-color: transparent;
+    border-color: #ee3739;
+    color: #ee3739;
+    text-decoration: none; }
+  button:hover, button:focus, .button:hover, .button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+    color: #ee3739; }
+  button[disabled], .button[disabled], input[type="button"][disabled], input[type="submit"][disabled] {
+    background-color: #008cba;
+    border-color: #006687;
+    color: white;
+    cursor: not-allowed;
+    opacity: 0.6;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+    button[disabled]:hover, button[disabled]:focus, .button[disabled]:hover, .button[disabled]:focus, input[type="button"][disabled]:hover, input[type="button"][disabled]:focus, input[type="submit"][disabled]:hover, input[type="submit"][disabled]:focus {
+      background-color: transparent;
+      border-color: #ee3739;
+      color: #ee3739;
+      text-decoration: none; }
+    button[disabled]:hover, button[disabled]:focus, .button[disabled]:hover, .button[disabled]:focus, input[type="button"][disabled]:hover, input[type="button"][disabled]:focus, input[type="submit"][disabled]:hover, input[type="submit"][disabled]:focus {
+      color: #ee3739; }
+    button[disabled]:hover, button[disabled]:focus, .button[disabled]:hover, .button[disabled]:focus, input[type="button"][disabled]:hover, input[type="button"][disabled]:focus, input[type="submit"][disabled]:hover, input[type="submit"][disabled]:focus {
+      background-color: #008cba;
+      color: white;
+      text-decoration: none;
+      border: none; }
+  button.button-alt, .button.button-alt, input[type="button"].button-alt, input[type="submit"].button-alt {
+    border-style: solid;
+    border-width: 1px;
+    cursor: "pointer";
+    font-family: inherit;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0 0 1.25em;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: all, 0.2s ease-in-out;
+    -moz-transition: all, 0.2s ease-in-out;
+    -ms-transition: all, 0.2s ease-in-out;
+    -o-transition: all, 0.2s ease-in-out;
+    transition: all, 0.2s ease-in-out;
+    display: inline-block;
+    padding-top: 0.75em;
+    padding-right: 1.5em;
+    padding-bottom: 0.8125em;
+    padding-left: 1.5em;
+    font-size: 1em;
+    background-color: white;
+    border-color: #e6e6e6;
+    color: #333333;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    background: transparent;
+    border: 1px solid #1999ce;
+    text-align: left;
+    color: #1999ce;
+    background-image: url(../images/button-arrow.png);
+    background-repeat: no-repeat;
+    background-position: right 10px center; }
+    button.button-alt:hover, button.button-alt:focus, .button.button-alt:hover, .button.button-alt:focus, input[type="button"].button-alt:hover, input[type="button"].button-alt:focus, input[type="submit"].button-alt:hover, input[type="submit"].button-alt:focus {
+      background-color: transparent;
+      border-color: #ee3739;
+      color: #ee3739;
+      text-decoration: none; }
+    button.button-alt:hover, button.button-alt:focus, .button.button-alt:hover, .button.button-alt:focus, input[type="button"].button-alt:hover, input[type="button"].button-alt:focus, input[type="submit"].button-alt:hover, input[type="submit"].button-alt:focus {
+      color: #333333; }
+    button.button-alt:hover, .button.button-alt:hover, input[type="button"].button-alt:hover, input[type="submit"].button-alt:hover {
+      color: #ee3739;
+      border: 1px solid #ee3739;
+      background-image: url(../images/button-arrow-active.png); }
+    button.button-alt[disabled], .button.button-alt[disabled], input[type="button"].button-alt[disabled], input[type="submit"].button-alt[disabled] {
+      background-color: #008cba;
+      border-color: #006687;
+      color: white;
+      cursor: not-allowed;
+      opacity: 0.6;
+      border: none;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+      button.button-alt[disabled]:hover, button.button-alt[disabled]:focus, .button.button-alt[disabled]:hover, .button.button-alt[disabled]:focus, input[type="button"].button-alt[disabled]:hover, input[type="button"].button-alt[disabled]:focus, input[type="submit"].button-alt[disabled]:hover, input[type="submit"].button-alt[disabled]:focus {
+        background-color: transparent;
+        border-color: #ee3739;
+        color: #ee3739;
+        text-decoration: none; }
+      button.button-alt[disabled]:hover, button.button-alt[disabled]:focus, .button.button-alt[disabled]:hover, .button.button-alt[disabled]:focus, input[type="button"].button-alt[disabled]:hover, input[type="button"].button-alt[disabled]:focus, input[type="submit"].button-alt[disabled]:hover, input[type="submit"].button-alt[disabled]:focus {
+        color: #ee3739; }
+      button.button-alt[disabled]:hover, button.button-alt[disabled]:focus, .button.button-alt[disabled]:hover, .button.button-alt[disabled]:focus, input[type="button"].button-alt[disabled]:hover, input[type="button"].button-alt[disabled]:focus, input[type="submit"].button-alt[disabled]:hover, input[type="submit"].button-alt[disabled]:focus {
+        background-color: #008cba;
+        color: white;
+        text-decoration: none;
+        border: none; }
+
+.button {
+  font-family: "proxima-nova", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400; }
+  .button:visited {
+    color: white; }
+    .button:visited:hover {
+      color: #ee3739; }
+  .button.button-alt:visited {
+    color: #1999ce; }
+
+.button-disabled {
+  font-family: "proxima-nova", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  border-style: solid;
+  border-width: 1px;
+  cursor: "pointer";
+  font-family: inherit;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0 0 1.25em;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: all, 0.2s ease-in-out;
+  -moz-transition: all, 0.2s ease-in-out;
+  -ms-transition: all, 0.2s ease-in-out;
+  -o-transition: all, 0.2s ease-in-out;
+  transition: all, 0.2s ease-in-out;
+  display: inline-block;
+  padding-top: 0.75em;
+  padding-right: 1.5em;
+  padding-bottom: 0.8125em;
+  padding-left: 1.5em;
+  font-size: 1em;
+  background-color: #1999ce;
+  border-color: #1377a1;
+  color: white;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+  background-color: #008cba;
+  border-color: #006687;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.6;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-weight: 400; }
+  .button-disabled:hover, .button-disabled:focus {
+    background-color: transparent;
+    border-color: #ee3739;
+    color: #ee3739;
+    text-decoration: none; }
+  .button-disabled:hover, .button-disabled:focus {
+    color: #ee3739; }
+  .button-disabled:hover, .button-disabled:focus {
+    background-color: transparent;
+    border-color: #ee3739;
+    color: #ee3739;
+    text-decoration: none; }
+  .button-disabled:hover, .button-disabled:focus {
+    color: #ee3739; }
+  .button-disabled:hover, .button-disabled:focus {
+    background-color: #008cba;
+    color: white;
+    text-decoration: none;
+    border: none; }
+  .button-disabled:visited {
+    color: white; }

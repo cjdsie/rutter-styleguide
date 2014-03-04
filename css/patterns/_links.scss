@@ -18,4 +18,8 @@ a {
     color: $default-link;
     /* external link styles, use :before or :after if you want! */
   }
+  &:active{
+    color: $rutter-dk-blue;
+    text-decoration: underline;
+  }
 }

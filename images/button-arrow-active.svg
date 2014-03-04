@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="19px" viewBox="0 0 12 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>button-arrow</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M9.89447039,18.8955935 L11.8944777,17.7080863 C12.0500337,17.5541507 12.0500337,17.2902611 11.8944777,17.1363255 L4.16112832,9.50552261 L11.8944777,1.87471972 C12.0500337,1.72078413 12.0500337,1.45689455 11.8944777,1.30295896 L9.89447039,0.115451692 C9.73891443,-0.0384838972 9.47224706,-0.0384838972 9.3166911,0.115451692 L0.116666973,9.21964223 C-0.0388889909,9.37357782 -0.0388889909,9.6374674 0.116666973,9.79140299 L9.3166911,18.8955935 C9.40558022,18.9615659 9.49446934,19.0055475 9.60558075,19.0055475 C9.71669215,19.0055475 9.80558127,18.9615659 9.89447039,18.8955935 Z" id="◅" fill="#EE3739" sketch:type="MSShapeGroup" transform="translate(6.000000, 9.500000) scale(-1, 1) translate(-6.000000, -9.500000) "></path>
+    </g>
+</svg>
