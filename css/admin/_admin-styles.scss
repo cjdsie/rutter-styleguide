@@ -77,10 +77,13 @@ body {
     text-decoration: none;
     font-weight: $semi-bold;
     text-transform: uppercase;
+    border: 1px solid #849f41;
     @include transition(background, 0.2s ease-in-out);
     &:hover{
       background: #849f41;
       color: $white;
+      border: 1px solid $admin-color-green;
+    
     }
     &:visited, &[rel="external"]{
       color: $white;

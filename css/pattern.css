@@ -978,6 +978,7 @@ body {
     text-decoration: none;
     font-weight: 600;
     text-transform: uppercase;
+    border: 1px solid #849f41;
     -webkit-transition: background, 0.2s ease-in-out;
     -moz-transition: background, 0.2s ease-in-out;
     -ms-transition: background, 0.2s ease-in-out;
@@ -985,7 +986,8 @@ body {
     transition: background, 0.2s ease-in-out; }
     .admin-header .button:hover {
       background: #849f41;
-      color: white; }
+      color: white;
+      border: 1px solid #9fbb58; }
     .admin-header .button:visited, .admin-header .button[rel="external"] {
       color: white; }
 
