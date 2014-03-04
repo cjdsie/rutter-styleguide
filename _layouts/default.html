@@ -1,0 +1,21 @@
+{% include html-header.html %}
+
+<!-- Place your CSS files here
+================================================== -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet", href="css/pattern.min.css">
+
+<!-- Modernize older versions of IE
+ ================================================== -->
+ {% include older-ie-scripts.html %}
+
+</head><!-- @head -->
+    <body>
+{% include header.html %}
+<main class="patterns container" role="main">
+        {{content}}
+</main><!-- @patterns -->
+
+{% include navigation.html %}
+ {% include footer.html %}
+{% include html-footer.html %}

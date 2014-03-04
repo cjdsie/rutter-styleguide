@@ -1,0 +1,63 @@
+$admin-font: "Open Sans",sans-serif;
+$admin-color-lightgrey: #868c92; //light grey for body copy
+$admin-color-lightblue: #5ba4e5; //light blue for secondary or tertiary headlines
+$admin-color-darkgrey: #242628; //dark grey for reserved headlines or dark copy
+$admin-color-beige: #edece4; //beige for background
+$admin-color-green: #9fbb58; //accent green
+$admin-color-footer: #18191b; //really dark footer color (optional)
+
+$admin-basefont:16;
+$admin-baseh1:55;
+$admin-baseh2:36;
+$admin-baseh3:26;
+$admin-baseh4:22;
+$admin-baseh5:11;
+$admin-baseh6:16;
+$admin-basep: 16;
+
+
+// Wireframe Base Colors. For more color options, se color-palette.scss.
+
+$black-10: darken(#fff, 10%);
+$black-20: darken(#fff, 20%);
+$black-30: darken(#fff, 30%);
+$black-40: darken(#fff, 40%);
+$black-50: darken(#fff, 50%);
+$black-60: darken(#fff, 60%);
+$black-70: darken(#fff, 70%);
+$black-80: darken(#fff, 80%);
+$black-90: darken(#fff, 90%);
+
+
+@mixin admin-body {
+  font-family: $admin-font;
+  font-weight: 400;
+  font-style: normal;
+  font-size: em(18);
+  line-height: 1.5;
+}
+
+@mixin section-style {
+  width: 100%;
+  display:block;
+  position: relative;
+  font-family: $admin-font;
+  @include clearfix();
+  margin-bottom: ($base-unit * 12);
+  h4.admin-h4{
+    font-weight: $bold;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-size: em($admin-baseh4);
+    font-family: inherit;
+  }
+  h3.admin-h3{
+    color: $admin-color-lightblue;
+    font-size: em($admin-baseh3);
+    border-bottom: 1px solid $admin-color-beige;
+    font-weight: $light;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+}
+
