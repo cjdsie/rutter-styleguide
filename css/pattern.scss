@@ -90,3 +90,22 @@ button, .button, input[type="button"], input[type="submit"]{
     color: $button-font-color;
   }
 }
+
+
+[class^="icon-"], [class*=" icon-"]{
+  &.circle{
+    border: 2px solid transparent;
+    border-radius: 100%;
+    padding: 0;
+    color: $default-link;
+    cursor: pointer;
+    @include transition(all, 0.2s linear);
+    &:hover{
+      @include vendorize(transform, scale(2, 2));
+      @include vendorize(transform-origin, center);
+	  padding: 2%;
+	  color: $rutter-dk-blue;
+      border: 2px solid $rutter-dk-blue;
+    } 
+  }
+}

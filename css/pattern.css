@@ -1250,6 +1250,12 @@ body {
     padding: 12px; }
     .pattern .pattern-preview.dark {
       background-color: #333; }
+    .pattern .pattern-preview.icons div {
+      display: inline;
+      float: left;
+      width: 31.25%;
+      margin: 0 1.04167%;
+      margin-bottom: 12px; }
   .pattern .pattern-list {
     list-style: none;
     display: block;
@@ -1711,3 +1717,29 @@ button, .button, input[type="button"], input[type="submit"] {
     border: none; }
   .button-disabled:visited {
     color: white; }
+
+[class^="icon-"].circle, [class*=" icon-"].circle {
+  border: 2px solid transparent;
+  border-radius: 100%;
+  padding: 0;
+  color: #1999ce;
+  cursor: pointer;
+  -webkit-transition: all, 0.2s linear;
+  -moz-transition: all, 0.2s linear;
+  -ms-transition: all, 0.2s linear;
+  -o-transition: all, 0.2s linear;
+  transition: all, 0.2s linear; }
+  [class^="icon-"].circle:hover, [class*=" icon-"].circle:hover {
+    -webkit-transform: scale(2, 2);
+    -moz-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    -o-transform: scale(2, 2);
+    transform: scale(2, 2);
+    -webkit-transform-origin: center;
+    -moz-transform-origin: center;
+    -ms-transform-origin: center;
+    -o-transform-origin: center;
+    transform-origin: center;
+    padding: 2%;
+    color: #23628e;
+    border: 2px solid #23628e; }

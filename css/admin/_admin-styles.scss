@@ -307,6 +307,12 @@ body {
 	  &.dark{
 	    background-color: #333;
 	  }
+	  &.icons{
+	    div{
+	      @include column(4);
+	      margin-bottom: ($base-unit * 2);
+	    }
+	  }
 	}
 	.pattern-list{
 	  list-style: none;
