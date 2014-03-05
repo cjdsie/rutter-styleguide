@@ -18,8 +18,11 @@ a {
     color: $default-link;
     /* external link styles, use :before or :after if you want! */
   }
+<<<<<<< HEAD
   &:active{
     color: $rutter-dk-blue;
     text-decoration: underline;
   }
+=======
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
 }

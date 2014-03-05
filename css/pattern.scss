@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @import "admin/normalize","variables", "mixins", "patterns/transitions", "patterns/typography", "patterns/grid", "patterns/images", "patterns/header", "patterns/avatars", "patterns/lists", "patterns/links", "patterns/buttons", "patterns/blockquotes", "admin/admin-styles", "admin/prism";
+=======
+@import "admin/normalize","variables", "mixins", "patterns/transitions", "patterns/typography", "patterns/grid", "patterns/images", "patterns/avatars", "patterns/lists", "patterns/links", "patterns/blockquotes", "admin/admin-styles";
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
 
 *{
   @include border-box;
@@ -34,6 +38,7 @@ p,figure,
 pre,table,fieldset,hr {
   margin-bottom: $spacing;
 }
+<<<<<<< HEAD
 
 //
 // Icon Fonts
@@ -136,3 +141,5 @@ pre,table,fieldset,hr {
 	}
   }
 }
+=======
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2

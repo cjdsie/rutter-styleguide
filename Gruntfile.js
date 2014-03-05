@@ -13,14 +13,23 @@ module.exports = function(grunt) {
 			dev: {                              // Another target
 				options: {
 					style: 'compacted',                      // Dictionary of render options
+<<<<<<< HEAD
 					includePaths: ['css', 'css/admin/','css/patterns/', 'css/optional/']
+=======
+					includePaths: ['stylesheets', 'admin/','patterns/', 'optional/']
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
 				}
 			}
 		},
 		uglify: {
 			build: {
+<<<<<<< HEAD
 				src: 'js/plugins.js',
 				dest: 'js/plugins.min.js'
+=======
+				src: 'js/pattern.js',
+				dest: 'js/pattern.min.js'
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
 			}
 		},
 		cssmin: {
@@ -48,7 +57,11 @@ module.exports = function(grunt) {
 				separator: ';'
 			},
 			js: {
+<<<<<<< HEAD
 				src: ['js/plugins.min.js'],
+=======
+				src: ['js/classie.js', 'js/pattern.js'],
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
 				dest: 'js/pattern.min.js'
 			}
 		},

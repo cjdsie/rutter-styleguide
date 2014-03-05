@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @import "admin-variables";
+=======
+@import "admin-variables", "prism";
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
 
 *{
   @include border-box;
@@ -77,13 +81,19 @@ body {
     text-decoration: none;
     font-weight: $semi-bold;
     text-transform: uppercase;
+<<<<<<< HEAD
     border: 1px solid #849f41;
+=======
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
     @include transition(background, 0.2s ease-in-out);
     &:hover{
       background: #849f41;
       color: $white;
+<<<<<<< HEAD
       border: 1px solid $admin-color-green;
     
+=======
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
     }
     &:visited, &[rel="external"]{
       color: $white;
@@ -288,6 +298,7 @@ body {
 	  color: $admin-color-green;
 	  cursor: pointer;
 	}
+<<<<<<< HEAD
 	pre[class*="language-"]{
 	  background-color: $white;
 	  @include column(12);
@@ -301,18 +312,37 @@ body {
 	    @include column(4);
 	  }
 	  
+=======
+	.pattern-markup {
+	  background-color: $white;
+	  border: 1px solid $admin-color-beige;
+	  @include column(8);
+	  display: block;
+	  font-size: 12px;
+	  overflow-y: scroll;
+	  max-height: 200px;
+	  padding: 1em 2%;
+	  margin: 1em 0;
+	  word-wrap: break-word;
+	}
+	.pattern-markup, :not(pre) > code[class*="language-"] {
+	  padding: 1em 2% !important;
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
 	}
 	.pattern-preview{
 	  padding: ($base-unit * 2);
 	  &.dark{
 	    background-color: #333;
 	  }
+<<<<<<< HEAD
 	  &.icons{
 	    div{
 	      @include column(4);
 	      margin-bottom: ($base-unit * 2);
 	    }
 	  }
+=======
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
 	}
 	.pattern-list{
 	  list-style: none;

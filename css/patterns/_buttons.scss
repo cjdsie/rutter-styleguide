@@ -7,14 +7,21 @@
 //
 // Button Variables
 //
+<<<<<<< HEAD
 $experimental: true !default;
+=======
+
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
 // We use these to build padding for buttons.
 $button-med: em(12) !default;
 $button-tny: em(7) !default;
 $button-sml: em(9) !default;
 $button-lrg: em(16) !default;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
 // We use this to control the display property.
 $button-display: inline-block !default;
 $button-margin-bottom: em(20) !default;
@@ -27,6 +34,7 @@ $button-font-med: em(16) !default;
 $button-font-tny: em(11) !default;
 $button-font-sml: em(13) !default;
 $button-font-lrg: em(20) !default;
+<<<<<<< HEAD
 $button-font-weight: $light !default;
 $button-font-align: center !default;
 $button-text-transform: uppercase !default;
@@ -39,6 +47,10 @@ $opposite-direction: right !default;
   $default-float: right;
   $opposite-direction: left;
 }
+=======
+$button-font-weight: $semi-bold !default;
+$button-font-align: center !default;
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
 
 // We use these to control various hover effects.
 $button-function-factor: 10% !default;
@@ -59,18 +71,22 @@ $button-round: $global-rounded !default;
 $button-disabled-opacity: 0.6 !default;
 
 
+<<<<<<< HEAD
 // We use these as default colors throughout
 $primary-color: #008CBA !default;
 $secondary-color: #e7e7e7 !default;
 $alert-color: #f04124 !default;
 $success-color: #43AC6A !default;
 
+=======
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
 
 
 //
 // Button Mixins
 //
 
+<<<<<<< HEAD
 @mixin radius($radius:$global-radius) {
   @if $radius {
     @if $experimental {
@@ -81,6 +97,8 @@ $success-color: #43AC6A !default;
 }
 
 
+=======
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
 // We use this mixin to create a default button base.
 @mixin button-base($style:true, $display:$button-display) {
   @if $style {
@@ -89,13 +107,19 @@ $success-color: #43AC6A !default;
     cursor: $cursor-pointer-value;
     font-family: $button-font-family;
     font-weight: $button-font-weight;
+<<<<<<< HEAD
     text-transform: $button-text-transform;
+=======
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
     line-height: 1;
     margin: 0 0 $button-margin-bottom;
     position: relative;
     text-decoration: none;
     text-align: $button-font-align;
+<<<<<<< HEAD
     @include transition(all, 0.2s ease-in-out);
+=======
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
   }
   @if $display { display: $display; }
 }
@@ -159,7 +183,11 @@ $success-color: #43AC6A !default;
     background-color: $bg;
     border-color: darken($bg, $button-function-factor);
     &:hover,
+<<<<<<< HEAD
     &:focus { background-color: transparent; border-color: $default-link-hover; color: $default-link-hover; text-decoration: none; }
+=======
+    &:focus { background-color: darken($bg, $button-function-factor); }
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
 
     // We control the text color for you based on the background color.
     @if $bg-lightness > 70% {
@@ -170,21 +198,34 @@ $success-color: #43AC6A !default;
     @else {
       color: $button-font-color;
       &:hover,
+<<<<<<< HEAD
       &:focus { color: $default-link-hover; }
+=======
+      &:focus { color: $button-font-color; }
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
     }
   }
 
   // We can set $disabled:true to create a disabled transparent button.
   @if $disabled {
+<<<<<<< HEAD
     cursor: not-allowed;
     opacity: $button-disabled-opacity;
     border:none;
+=======
+    cursor: $cursor-default-value;
+    opacity: $button-disabled-opacity;
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
     @if $experimental {
       -webkit-box-shadow: none;
     }
     box-shadow: none;
     &:hover,
+<<<<<<< HEAD
     &:focus { background-color: $bg; color: $button-font-color; text-decoration: none; border:none; }
+=======
+    &:focus { background-color: $bg; }
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
   }
 
   // We can control how much button radius us used.
@@ -194,11 +235,16 @@ $success-color: #43AC6A !default;
 }
 
 // We use this to quickly create buttons with a single mixin. As @jaredhardy puts it, "the kitchen sink mixin"
+<<<<<<< HEAD
 @mixin button($padding:$button-med, $bg:$primary-color, $radius:false, $button-text-transform:false, $full-width:false, $disabled:false, $is-input:false, $is-prefix:false) {
+=======
+@mixin button($padding:$button-med, $bg:$primary-color, $radius:false, $full-width:false, $disabled:false, $is-input:false, $is-prefix:false) {
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
   @include button-base;
   @include button-size($padding, $full-width, $is-input);
   @include button-style($bg, $radius, $disabled);
 }
+<<<<<<< HEAD
 
 
 
@@ -258,3 +304,5 @@ button, .button, input[type="button"], input[type="submit"]{
     color: $button-font-color;
   }
 }
+=======
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2

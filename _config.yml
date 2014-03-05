@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 name: Rutter Pattern Portfolio
+=======
+name: Your New Jekyll Site
+>>>>>>> 87434392b1a243bd0d25fd3769abbe72487ff4e2
 markdown: redcarpet
 pygments: true
