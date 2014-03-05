@@ -199,3 +199,62 @@ $success-color: #43AC6A !default;
   @include button-size($padding, $full-width, $is-input);
   @include button-style($bg, $radius, $disabled);
 }
+
+
+
+
+//Button styles
+/* Buttons
+===================================*/
+
+button, .button, input[type="button"], input[type="submit"]{
+  @include button($button-med, $rutter-blue, 1px, true);
+  &[disabled]{
+   @include button-style($disabled:true); 
+  }
+  &.button-alt{
+    @include button($button-med, $white, 1px, true);
+    background: transparent;
+    border: 1px solid $default-link;
+    text-align:left;
+    color: $default-link;
+    background-image: url(../images/button-arrow.png);
+    background-repeat: no-repeat;
+	background-position: right 10px center;
+    &:hover{
+      color: $default-link-hover;
+      border: 1px solid $default-link-hover;
+      background-image: url(../images/button-arrow-active.png);
+    }
+    &[disabled]{
+     @include button-style($disabled:true); 
+    }
+     
+  }
+}
+
+.button{
+  font-family: $body-font;
+  font-weight: $regular;
+  &:visited{
+    color: $button-font-color;
+    &:hover{
+      color: $default-link-hover;
+    }
+  }
+  &.button-alt{
+    &:visited{
+      color: $default-link;
+    }
+  }
+}
+
+.button-disabled{
+   font-family: $body-font;
+   @include button($button-med, $rutter-blue, 1px, true);
+   @include button-style($disabled:true);
+   font-weight: $regular;
+   &:visited{
+    color: $button-font-color;
+  }
+}
