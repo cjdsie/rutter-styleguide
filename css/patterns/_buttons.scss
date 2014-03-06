@@ -214,17 +214,42 @@ button, .button, input[type="button"], input[type="submit"]{
   }
   &.button-alt{
     @include button($button-med, $white, 1px, true);
-    background: transparent;
+    background: none;
     border: 1px solid $default-link;
     text-align:left;
     color: $default-link;
-    background-image: url(../images/button-arrow.png);
-    background-repeat: no-repeat;
-	background-position: right 10px center;
+    position: relative;
+    display: inline-block;
+    padding-left: ($base-unit * 8);
+    padding-right: ($base-unit * 8);
+    overflow: hidden;
+    outline: none;
+    @include transition(all, 0.3s);
+	&:before{
+	  font-family: "icomoon";
+	  content: "\e72a";
+	  position: absolute;
+	  height: 100%;
+	  font-size: 100%;
+	  line-height: 1.2;
+	  left: 70%;
+	  opacity: 0;
+	  color: $default-link-hover;
+	  @include transition(all, 0.3s);
+	}
+	&:after{
+	  content: '';
+	  position: absolute;
+	  z-index: -1;
+	  @include transition(all, 0.3s); 
+	}
     &:hover{
       color: $default-link-hover;
-      border: 1px solid $default-link-hover;
-      background-image: url(../images/button-arrow-active.png);
+      background:rgba(255,255,255,.13);
+      &:before{
+        left: 85%;
+        opacity: 1;
+      }
     }
     &[disabled]{
      @include button-style($disabled:true); 

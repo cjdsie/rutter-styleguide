@@ -438,11 +438,11 @@ $imagePath:   "../img/" !default;
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 35px;
+    width: 30px;
     height: 25px;
     pointer-events: none;
     background: url('../images/masks/photo-corner.png') no-repeat left bottom;
     background: url('../images/masks/photo-corner.svg');
-    background-position: -44px bottom;
+    background-position: -50px bottom;
   }
 }

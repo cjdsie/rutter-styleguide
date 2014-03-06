@@ -143,52 +143,125 @@ ol{
   margin-left: 0;
   padding: 0;
   width: inherit;
+  @include clearfix();
   li{
-    background-color: $event-listing-grey;
-    @include column(6);
+    @include column(12);
     margin-bottom:( $base-unit * 2);
     @include clearfix();
+    @media(min-width: 50em){
+      background-color: $event-listing-grey;
+    }
+    @media(min-width: 70em){
+      @include column(6);
+      margin-bottom:( $base-unit * 2);
+    }
     .cutoff-image{
       background-color: $rutter-dk-blue;
-      @include column(2.4);
+      @include column(12);
       margin: 0;
       padding: 0px 0 2%;
       text-align: center;
+      &:after{
+        background-image: none;
+      }
+      @media(min-width: 50em){
+        @include column(2.5);
+        margin: 0;
+        &:after{
+          background: url('../images/masks/photo-corner.png') no-repeat left bottom;
+	      background: url('../images/masks/photo-corner.svg');
+	      background-position: -50px bottom;
+        }
+      }
       span{
         font-size: em($baseh3);
         color: $white;
         font-weight: $bold;
         text-transform: uppercase;
+        display: inline-block;
+        @media(min-width: 50em){
+          font-size: em($baseh3);
+          display:block;
+        }
       }
       h2{
         color: $white;
-        font-size: em($baseh1);
+        font-size: em($baseh3);
         margin:0;
         line-height: .75;
         font-weight: $thin;
+        display: inline-block;
+        @media(min-width: 50em){
+          font-size: em($baseh1);
+          display:block;
+        }
       }
     }
     .event-info{
-      @include column(9.8);
+      background-color: $event-listing-grey;
+      @include column(12);
+      padding: 0%;
+      margin: 0;
       padding-bottom: 1%;
+      position: relative;
+      text-align: center;
+      @media(min-width: 50em){
+        @include column(9.5); 
+        padding: 0 3%;
+        margin: 0;
+        text-align: left;
+      }
+      @media(min-width: 70em){
+        @include column(10);
+        margin:0;
+        padding-right: 1%;
+      }
       span{
-        font-size: em(13);
+        font-size: em(12);
         font-weight: $light;
       }
       h3{
-        font-size: em(20);
-        margin-bottom: ($base-unit + 3);
+        font-size: em(16);
+        margin-bottom: ($base-unit * 3);
+        @media(min-width: 71em){
+          font-size: em(18);
+          margin-bottom: ($base-unit + 3);
+        }
+        @media(min-width: 75em){
+          font-size: em(22);
+        }
       }
       .location{
         font-weight: $light;
-        @include column(6);
+        width: 100%;
+        display: block;
+        position: relative;
+        padding: 2% 0;
+        background: $rutter-dk-grey;
+        @media(min-width: 50em){
+          @include column(8);
+          background: none;
+          padding: 0;
+        }
+        @media(min-width: 75em){
+          @include column(6);
+        }
         margin:0;
         span{
           color: $rutter-light-grey;
         }
       }
       a{
-        float:right;
+        float:none;
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: ($base-unit);
+        @media(min-width: 50em){
+          width: auto;
+          float:right;
+        }
+
       }
     }
   }

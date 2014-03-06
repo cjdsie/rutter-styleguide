@@ -29,10 +29,16 @@ header{
     h1{
       background: rgba(0, 0, 0, .4);
       max-width: 824px;
+      width: 80%;
       color: $white;
-      line-height: 1.2;
+      font-size: em($baseh2);
+      line-height: 1;
       padding: 1%;
-      position:relative;	
+      position:relative;
+      @media(min-width: 60em){
+        font-size: em($baseh1);
+        width: 100%;
+      }
     }
   }
 }

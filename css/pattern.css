@@ -559,12 +559,12 @@ figure {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 35px;
+    width: 30px;
     height: 25px;
     pointer-events: none;
     background: url("../images/masks/photo-corner.png") no-repeat left bottom;
     background: url("../images/masks/photo-corner.svg");
-    background-position: -44px bottom; }
+    background-position: -50px bottom; }
 
 .header-image {
   max-height: 100%;
@@ -593,10 +593,16 @@ figure {
     .header-image .text-overlay h1 {
       background: rgba(0, 0, 0, 0.4);
       max-width: 824px;
+      width: 80%;
       color: white;
-      line-height: 1.2;
+      font-size: 2.5em;
+      line-height: 1;
       padding: 1%;
       position: relative; }
+      @media (min-width: 60em) {
+        .header-image .text-overlay h1 {
+          font-size: 3.75em;
+          width: 100%; } }
 
 /* Images
    You can change each of the sizes to fix your design
@@ -722,12 +728,17 @@ ol {
 .event-listing {
   margin-left: 0;
   padding: 0;
-  width: inherit; }
+  width: inherit;
+  *zoom: 1; }
+  .event-listing:before, .event-listing:after {
+    content: "";
+    display: table; }
+  .event-listing:after {
+    clear: both; }
   .event-listing li {
-    background-color: #ebebe7;
     display: inline;
     float: left;
-    width: 47.91667%;
+    width: 97.91667%;
     margin: 0 1.04167%;
     margin-bottom: 12px;
     *zoom: 1; }
@@ -736,49 +747,134 @@ ol {
       display: table; }
     .event-listing li:after {
       clear: both; }
-    .event-listing li .cutoff-image {
-      background-color: #23628e;
-      display: inline;
-      float: left;
-      width: 17.91667%;
-      margin: 0 1.04167%;
-      margin: 0;
-      padding: 0px 0 2%;
-      text-align: center; }
-      .event-listing li .cutoff-image span {
-        font-size: 1.5em;
-        color: white;
-        font-weight: 700;
-        text-transform: uppercase; }
-      .event-listing li .cutoff-image h2 {
-        color: white;
-        font-size: 3.75em;
-        margin: 0;
-        line-height: .75;
-        font-weight: 100; }
-    .event-listing li .event-info {
-      display: inline;
-      float: left;
-      width: 79.58333%;
-      margin: 0 1.04167%;
-      padding-bottom: 1%; }
-      .event-listing li .event-info span {
-        font-size: 0.8125em;
-        font-weight: 300; }
-      .event-listing li .event-info h3 {
-        font-size: 1.25em;
-        margin-bottom: 9px; }
-      .event-listing li .event-info .location {
-        font-weight: 300;
+    @media (min-width: 50em) {
+      .event-listing li {
+        background-color: #ebebe7; } }
+    @media (min-width: 70em) {
+      .event-listing li {
         display: inline;
         float: left;
         width: 47.91667%;
         margin: 0 1.04167%;
+        margin-bottom: 12px; } }
+    .event-listing li .cutoff-image {
+      background-color: #23628e;
+      display: inline;
+      float: left;
+      width: 97.91667%;
+      margin: 0 1.04167%;
+      margin: 0;
+      padding: 0px 0 2%;
+      text-align: center; }
+      .event-listing li .cutoff-image:after {
+        background-image: none; }
+      @media (min-width: 50em) {
+        .event-listing li .cutoff-image {
+          display: inline;
+          float: left;
+          width: 18.75%;
+          margin: 0 1.04167%;
+          margin: 0; }
+          .event-listing li .cutoff-image:after {
+            background: url("../images/masks/photo-corner.png") no-repeat left bottom;
+            background: url("../images/masks/photo-corner.svg");
+            background-position: -50px bottom; } }
+      .event-listing li .cutoff-image span {
+        font-size: 1.5em;
+        color: white;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: inline-block; }
+        @media (min-width: 50em) {
+          .event-listing li .cutoff-image span {
+            font-size: 1.5em;
+            display: block; } }
+      .event-listing li .cutoff-image h2 {
+        color: white;
+        font-size: 1.5em;
+        margin: 0;
+        line-height: .75;
+        font-weight: 100;
+        display: inline-block; }
+        @media (min-width: 50em) {
+          .event-listing li .cutoff-image h2 {
+            font-size: 3.75em;
+            display: block; } }
+    .event-listing li .event-info {
+      background-color: #ebebe7;
+      display: inline;
+      float: left;
+      width: 97.91667%;
+      margin: 0 1.04167%;
+      padding: 0%;
+      margin: 0;
+      padding-bottom: 1%;
+      position: relative;
+      text-align: center; }
+      @media (min-width: 50em) {
+        .event-listing li .event-info {
+          display: inline;
+          float: left;
+          width: 77.08333%;
+          margin: 0 1.04167%;
+          padding: 0 3%;
+          margin: 0;
+          text-align: left; } }
+      @media (min-width: 70em) {
+        .event-listing li .event-info {
+          display: inline;
+          float: left;
+          width: 81.25%;
+          margin: 0 1.04167%;
+          margin: 0;
+          padding-right: 1%; } }
+      .event-listing li .event-info span {
+        font-size: 0.75em;
+        font-weight: 300; }
+      .event-listing li .event-info h3 {
+        font-size: 1em;
+        margin-bottom: 18px; }
+        @media (min-width: 71em) {
+          .event-listing li .event-info h3 {
+            font-size: 1.125em;
+            margin-bottom: 9px; } }
+        @media (min-width: 75em) {
+          .event-listing li .event-info h3 {
+            font-size: 1.375em; } }
+      .event-listing li .event-info .location {
+        font-weight: 300;
+        width: 100%;
+        display: block;
+        position: relative;
+        padding: 2% 0;
+        background: #737675;
         margin: 0; }
+        @media (min-width: 50em) {
+          .event-listing li .event-info .location {
+            display: inline;
+            float: left;
+            width: 64.58333%;
+            margin: 0 1.04167%;
+            background: none;
+            padding: 0; } }
+        @media (min-width: 75em) {
+          .event-listing li .event-info .location {
+            display: inline;
+            float: left;
+            width: 47.91667%;
+            margin: 0 1.04167%; } }
         .event-listing li .event-info .location span {
           color: #c6c6bc; }
       .event-listing li .event-info a {
-        float: right; }
+        float: none;
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 6px; }
+        @media (min-width: 50em) {
+          .event-listing li .event-info a {
+            width: auto;
+            float: right; } }
 
 .thumbnail-listing {
   width: 100%;
@@ -945,13 +1041,21 @@ button, .button, input[type="button"], input[type="submit"] {
     color: #333333;
     -webkit-border-radius: 1px;
     border-radius: 1px;
-    background: transparent;
+    background: none;
     border: 1px solid #1999ce;
     text-align: left;
     color: #1999ce;
-    background-image: url(../images/button-arrow.png);
-    background-repeat: no-repeat;
-    background-position: right 10px center; }
+    position: relative;
+    display: inline-block;
+    padding-left: 48px;
+    padding-right: 48px;
+    overflow: hidden;
+    outline: none;
+    -webkit-transition: all, 0.3s;
+    -moz-transition: all, 0.3s;
+    -ms-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    transition: all, 0.3s; }
     button.button-alt:hover, button.button-alt:focus, .button.button-alt:hover, .button.button-alt:focus, input[type="button"].button-alt:hover, input[type="button"].button-alt:focus, input[type="submit"].button-alt:hover, input[type="submit"].button-alt:focus {
       background-color: transparent;
       border-color: #ee3739;
@@ -959,10 +1063,36 @@ button, .button, input[type="button"], input[type="submit"] {
       text-decoration: none; }
     button.button-alt:hover, button.button-alt:focus, .button.button-alt:hover, .button.button-alt:focus, input[type="button"].button-alt:hover, input[type="button"].button-alt:focus, input[type="submit"].button-alt:hover, input[type="submit"].button-alt:focus {
       color: #333333; }
+    button.button-alt:before, .button.button-alt:before, input[type="button"].button-alt:before, input[type="submit"].button-alt:before {
+      font-family: "icomoon";
+      content: "\e72a";
+      position: absolute;
+      height: 100%;
+      font-size: 100%;
+      line-height: 1.2;
+      left: 70%;
+      opacity: 0;
+      color: #ee3739;
+      -webkit-transition: all, 0.3s;
+      -moz-transition: all, 0.3s;
+      -ms-transition: all, 0.3s;
+      -o-transition: all, 0.3s;
+      transition: all, 0.3s; }
+    button.button-alt:after, .button.button-alt:after, input[type="button"].button-alt:after, input[type="submit"].button-alt:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      -webkit-transition: all, 0.3s;
+      -moz-transition: all, 0.3s;
+      -ms-transition: all, 0.3s;
+      -o-transition: all, 0.3s;
+      transition: all, 0.3s; }
     button.button-alt:hover, .button.button-alt:hover, input[type="button"].button-alt:hover, input[type="submit"].button-alt:hover {
       color: #ee3739;
-      border: 1px solid #ee3739;
-      background-image: url(../images/button-arrow-active.png); }
+      background: rgba(255, 255, 255, 0.13); }
+      button.button-alt:hover:before, .button.button-alt:hover:before, input[type="button"].button-alt:hover:before, input[type="submit"].button-alt:hover:before {
+        left: 85%;
+        opacity: 1; }
     button.button-alt[disabled], .button.button-alt[disabled], input[type="button"].button-alt[disabled], input[type="submit"].button-alt[disabled] {
       background-color: #008cba;
       border-color: #006687;
