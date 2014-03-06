@@ -227,9 +227,6 @@ ol{
           font-size: em(18);
           margin-bottom: ($base-unit + 3);
         }
-        @media(min-width: 75em){
-          font-size: em(22);
-        }
       }
       .location{
         font-weight: $light;

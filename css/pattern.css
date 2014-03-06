@@ -838,9 +838,6 @@ ol {
           .event-listing li .event-info h3 {
             font-size: 1.125em;
             margin-bottom: 9px; } }
-        @media (min-width: 75em) {
-          .event-listing li .event-info h3 {
-            font-size: 1.375em; } }
       .event-listing li .event-info .location {
         font-weight: 300;
         width: 100%;
