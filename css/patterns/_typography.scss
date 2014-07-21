@@ -14,12 +14,6 @@
 	*/
 
 
-/* Functions
-========================= */
-
-@function em($target, $context: $basefont) {
-    @return ($target / $context) * 1em;
-}
 
 
 /* Base Styles
