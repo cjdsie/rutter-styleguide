@@ -275,6 +275,10 @@ button[disabled], html input[disabled] {
 *************************/
 /* Box sizing
 ========================= */
+/* Functions
+========================= */
+/* Font sizing
+========================= */
 /* Image Rendering 
 ========================= */
 /* Fixes and Resets
@@ -339,6 +343,8 @@ button[disabled], html input[disabled] {
 ============================== */
 /* Link List
 ============================== */
+/* Lead Copy Block
+================================== */
 /* Cutoff Image corner 
 ================================== */
 /* Container mixin
@@ -358,8 +364,6 @@ button[disabled], html input[disabled] {
 	*/
 /* Functions
 ========================= */
-/* Mixins
-========================= */
 /* Base Styles
 ========================= */
 h1, h2, h3, h4, h5, h6 {
@@ -374,48 +378,89 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: inherit; }
 
 h1 {
+  font-size: 60px;
   font-size: 3.75em;
+  font-size: 3.75rem;
   font-weight: 100;
   color: #1999ce;
   margin-bottom: 0.35em; }
 
 h2 {
   margin-bottom: 0.425em;
+  font-size: 40px;
   font-size: 2.5em;
+  font-size: 2.5rem;
   color: #1999ce; }
 
 h3 {
+  font-size: 24px;
   font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: .1em;
   margin-bottom: 0.79167em; }
 
 h4 {
-  margin-bottom: 1.5em;
-  font-size: 1em; }
+  font-size: 16px;
+  font-size: 1em;
+  font-size: 1rem;
+  margin-bottom: 0.875em;
+  font-weight: 600; }
 
 h5, h6 {
+  font-size: 16px;
+  font-size: 1em;
+  font-size: 1rem;
   margin-bottom: 1.42857em; }
-
-.leadcopy {
-  font-size: 1.375em;
-  line-height: 1.5;
-  font-weight: 300;
-  color: #737675; }
 
 .subheader {
   color: #777; }
 
 p {
+  font-size: 16px;
+  font-size: 1em;
+  font-size: 1rem;
   margin: 0 0 1.5em 0; }
+
+.leadcopy {
+  font-size: 22px;
+  font-size: 1.375em;
+  font-size: 1.375rem;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #737675;
+  display: block;
+  position: relative;
+  max-width: 884px;
+  width: 96%;
+  padding-bottom: 36px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  .leadcopy {
+    *zoom: 1; }
+  .leadcopy:before, .leadcopy:after {
+    content: "";
+    display: table; }
+  .leadcopy:after {
+    clear: both; }
+  @media (min-width: 65em) {
+    .leadcopy {
+      width: auto; } }
+  .leadcopy p {
+    font-size: inherit; }
 
 ol, ul, dl, address {
   margin-bottom: 1.5em;
+  font-size: 16px;
   font-size: 1em;
+  font-size: 1rem;
   line-height: 1.5; }
 
 small {
-  font-size: 0.625em; }
+  font-size: 10px;
+  font-size: 0.625em;
+  font-size: 0.625rem; }
 
 blockquote:before, blockquote:after {
   content: '';
@@ -468,7 +513,9 @@ mark {
 
 pre, code, kbd, samp {
   font-family: Monaco,Courier New,monospace;
+  font-size: 14px;
   font-size: 0.875em;
+  font-size: 0.875rem;
   line-height: 1.5; }
 
 pre {
@@ -481,14 +528,18 @@ code {
 
 sub {
   position: relative;
+  font-size: 12px;
   font-size: 0.75em;
+  font-size: 0.75rem;
   line-height: 0;
   vertical-align: baselineheight;
   bottom: -0.25em; }
 
 sup {
   position: relative;
+  font-size: 12px;
   font-size: 0.75em;
+  font-size: 0.75rem;
   line-height: 0;
   vertical-align: baselineheight;
   top: -0.5em; }
@@ -499,7 +550,9 @@ p {
   p img {
     margin-bottom: 0.375em; }
   p.lead {
-    font-size: 1.3125em;
+    font-size: 22px;
+    font-size: 1.375em;
+    font-size: 1.375rem;
     line-height: 0.10547em;
     color: #777; }
   p + p.no-indent {
@@ -539,6 +592,7 @@ html {
   background-color: white;
   height: 100%;
   font-size: 100%;
+  font-size: 62.5%;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: #1999ce;
   -webkit-text-size-adjust: 100%;
@@ -550,7 +604,9 @@ html {
 body {
   background: white;
   font-family: "proxima-nova", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 1.125em;
+  font-size: 16px;
+  font-size: 1em;
+  font-size: 100%;
   line-height: 1.5;
   color: #737675;
   font-weight: 400;
@@ -887,25 +943,6 @@ pre, table, fieldset, hr {
       -o-background-size: cover;
       background-size: cover;
       height: 650px; }
-
-.copyright {
-  background: white;
-  width: 100%;
-  display: block;
-  position: relative;
-  padding: 18px;
-  vertical-align: middle;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
-  font-size: 0.875em; }
-  .copyright img {
-    width: 30px;
-    height: 30px;
-    display: inline;
-    vertical-align: middle;
-    margin-right: 12px; }
-  .copyright p {
-    display: inline;
-    vertical-align: middle; }
 
 /************************
 ****** Slabs *******
@@ -2096,7 +2133,7 @@ blockquote {
     .heading-menu ul.secondary-nav li {
       font-size: 12px;
       font-size: 0.75em;
-      font-size: 1.5rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
       text-align: center;
       padding: 0 1.5%;
@@ -2333,7 +2370,7 @@ table {
     border-top: 1px solid #8c9bab;
     font-size: 14px;
     font-size: 0.875em;
-    font-size: 1.75rem;
+    font-size: 0.875rem;
     line-height: 1.5;
     text-align: left; }
   table th {
@@ -2371,6 +2408,25 @@ table {
 .table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {
   background-color: #c7ced6; }
 
+.copyright {
+  background: white;
+  width: 100%;
+  display: block;
+  position: relative;
+  padding: 18px;
+  vertical-align: middle;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+  font-size: 0.875em; }
+  .copyright img {
+    width: 30px;
+    height: 30px;
+    display: inline;
+    vertical-align: middle;
+    margin-right: 12px; }
+  .copyright p {
+    display: inline;
+    vertical-align: middle; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2382,6 +2438,7 @@ html {
   background-color: white;
   height: 100%;
   font-size: 100%;
+  font-size: 80%;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: #9fbb58;
   -webkit-text-size-adjust: 100%;
@@ -2389,13 +2446,18 @@ html {
   -ms-text-size-adjust: 100%;
   -o-text-size-adjust: 100%;
   text-size-adjust: 100%; }
+  @media (min-width: 40em) {
+    html {
+      font-size: 90%; } }
+  @media (min-width: 55em) {
+    html {
+      font-size: 100%; } }
 
 body {
   background: white;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.125em;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   color: #868c92;
@@ -2404,7 +2466,18 @@ body {
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -o-text-size-adjust: 100%;
-  text-size-adjust: 100%; }
+  text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern", "liga", "case";
+  /* No variation */
+  -moz-font-feature-settings: "kern=1", "liga=1", "case=1";
+  /* Firefox 4.0 to 14.0 */
+  -moz-font-feature-settings: "kern", "liga" , "case";
+  /* Firefox 15.0 onwards */
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "case" 1;
+  /* Firefox 15.0 onwards explicitly set feature values */
+  font-feature-settings: "kern", "liga", "case";
+  /* No variation */
+  font-kerning: normal; }
 
 .admin-header {
   background: #edece4;

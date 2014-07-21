@@ -31,6 +31,31 @@
   #{$property}: $value;
 }
 
+
+/* Functions
+========================= */
+
+@function em($target, $context: $basefont) {
+    @return ($target / $context) * 1em;
+}
+
+
+/* Font sizing
+========================= */
+
+@mixin font-size($sizeValue: 12) {
+  font-size: $sizeValue + px; //fallback for old browsers
+  font-size: em($sizeValue);
+  font-size: (0.0625 * $sizeValue) + rem;
+}
+
+@mixin line-height($heightValue: 24) {
+	line-height: $heightValue + px; //fallback for old browsers
+	line-height: (24 / $basefont);
+	line-height: (0.0625 * $heightValue) + rem;
+}
+
+
 //************************************************************************//
 // Example: @include prefixer(border-radius, $radii, webkit ms spec);
 //************************************************************************//
@@ -422,6 +447,23 @@ $imagePath:   "../img/" !default;
     &:last-child {
       margin: 0;
    }
+  }
+}
+
+
+/* Lead Copy Block
+================================== */
+
+@mixin leadcopy{
+  display: block;
+  position: relative;
+  max-width: 884px;
+  width: 96%;
+  padding-bottom: ($base-unit * 6); 
+  @include center-block;
+  @include clearfix();
+  @media(min-width: 65em){
+    width: auto;
   }
 }
 

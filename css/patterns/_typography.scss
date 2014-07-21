@@ -21,20 +21,6 @@
     @return ($target / $context) * 1em;
 }
 
-/* Mixins
-========================= */
-
-@mixin font-size($sizeValue: 16) {
-  font-size: $sizeValue + px; //fallback for old browsers
-  font-size: em($sizeValue);
-  font-size: (0.125 * $sizeValue) + rem;
-}
-
-@mixin line-height($heightValue: 24) {
-	line-height: $heightValue + px; //fallback for old browsers
-	line-height: (24 / $basefont);
-	line-height: (0.125 * $heightValue) + rem;
-}
 
 /* Base Styles
 ========================= */
@@ -53,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: em($baseh1);
+  @include font-size($baseh1);
   font-weight: $thin;
   color: $rutter-blue;
   margin-bottom:em(21, $baseh1);
@@ -61,31 +47,26 @@ h1 {
 
 h2 {
   margin-bottom:em(17, $baseh2);
-  font-size: em($baseh2);
+  @include font-size($baseh2);
   color: $rutter-blue;
 }
 
 h3 {
-  font-size: em($baseh3);
+  @include font-size($baseh3);
   font-weight: $bold;
   letter-spacing: .1em;
   margin-bottom:em(19, $baseh3);
 }
 
 h4 {
-  margin-bottom:em(24, $baseh4);
-  font-size: em($baseh4);
+  @include font-size($baseh4);
+  margin-bottom:em(14, $baseh4);
+  font-weight: $semi-bold;
 }
 
 h5, h6 {
+  @include font-size($basefont);
   margin-bottom:em(20, $baseh5);
-}
-
-.leadcopy{
-  font-size: em($leadcopy);
-  line-height:(24 / $basefont);
-  font-weight: $light;
-  color: $rutter-dk-grey; 
 }
 
 .subheader {
@@ -93,17 +74,30 @@ h5, h6 {
 }
 
 p {
+  @include font-size($basefont);
   margin: 0 0 $vertical-measure 0; // set bottom margin equal to line-height/vertical measure
+}
+
+
+.leadcopy{
+  @include font-size($leadcopy);
+  line-height:(24 / $basefont);
+  font-weight: $light;
+  color: $rutter-dk-grey;
+  @include leadcopy;
+  p{
+    font-size: inherit;
+  }
 }
 
 ol, ul, dl, address {
   margin-bottom: em(24, $basefont);
-  font-size: em($basefont);
+  @include font-size($basefont);
   line-height: (24 / $basefont);
 }
 
 small {
-  font-size: em(10);
+  @include font-size(10);
 }
 
 blockquote {
@@ -173,7 +167,7 @@ mark {
 
 pre, code, kbd, samp {
   font-family: Monaco,Courier New,monospace;
-  font-size: em(14);
+  @include font-size(14);
   line-height: 1.5;
 }
 
@@ -190,7 +184,7 @@ code{
 
 sub {
   position: relative;
-  font-size: em(12);
+  @include font-size(12);
   line-height: 0;
   vertical-align: baselineheight;
   bottom: -0.25em;
@@ -198,7 +192,7 @@ sub {
 
 sup {
   position: relative;
-  font-size: em(12);
+  @include font-size(12);
   line-height: 0;
   vertical-align: baselineheight;
   top: -0.5em;
@@ -211,7 +205,7 @@ p {
     margin-bottom: 0.375em;
   }
   &.lead {
-    font-size: em(21);
+    @include font-size($leadcopy);
     line-height: em(27/$basefont);
     color: #777;
   }
@@ -232,4 +226,3 @@ strong {
 del {
   text-decoration: line-through;
 }
-

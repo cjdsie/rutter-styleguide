@@ -10,9 +10,16 @@ html {
   background-color: $body-bg; 
   height: 100%;
   font-size: $base-font-size;
+  font-size:80%;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: $admin-color-green;
   @include vendorize(text-size-adjust, $base-font-size);
+  @media(min-width: 40em) {
+    font-size:90%;
+  }
+  @media(min-width: 55em){
+    font-size: 100%;
+  }
 }
 
 
@@ -23,6 +30,12 @@ body {
   color: $admin-color-lightgrey;
   /* Fix for webkit rendering */
   @include vendorize(text-size-adjust, $base-font-size);
+  -webkit-font-feature-settings: "kern", "liga", "case"; /* No variation */
+  -moz-font-feature-settings: "kern=1", "liga=1", "case=1"; /* Firefox 4.0 to 14.0 */
+  -moz-font-feature-settings: "kern", "liga" , "case"; /* Firefox 15.0 onwards */
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "case" 1; /* Firefox 15.0 onwards explicitly set feature values */
+  font-feature-settings: "kern", "liga", "case"; /* No variation */
+  font-kerning: normal;
 }
 
 
