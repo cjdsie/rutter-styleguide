@@ -401,3 +401,82 @@ footer[role="contentinfo"]{
   }
 }
 
+
+//
+// Grid Example
+//
+
+.grid_example{
+  @include column(12);
+  background: #b1e0ec;
+  margin: ($base-unit * 4) 0;
+  article{
+    @include column(12);
+    @media(min-width: 55em){
+      @include column(12);
+    }
+  }
+  div{
+    &.half{
+      @include column(12);
+      margin-bottom: ($base-unit * 2);
+      @media(min-width: 55em){
+        @include column(6);
+      }
+    }
+    &.one-third{
+      @include column(12);
+      margin-bottom: ($base-unit * 2);
+      @media(min-width: 55em){
+        @include column(4);
+      }
+    }
+    &.one-fourth{
+      @include column(12);
+      margin-bottom: ($base-unit * 2);
+      @media(min-width: 55em){
+        @include column(3);
+      }
+    }
+    &.three-fourth{
+      @include column(12);
+      margin-bottom: ($base-unit * 2);
+      @media(min-width: 55em){
+        @include column(9);
+      }
+    }
+    &.two-third{
+      @include column(12);
+      margin-bottom: ($base-unit * 2);
+      @media(min-width: 55em){
+        @include column(8);
+      }
+    }
+    &.one-seventh{
+      @include column(12);
+      margin-bottom: ($base-unit * 2);
+      @media(min-width: 55em){
+        @include column(1.71);
+      }
+    }
+  }
+  aside{
+    @include column(12);
+    @media(min-width: 55em) {
+      @include column(4);
+    }
+  }
+  .grid-filler{
+    background: #46bcd2;
+	padding: 24px 0;
+	max-width: inherit;
+	margin-top: 1.2em!important;
+	margin-bottom: 1.2em!important;
+	font-weight: $regular;
+	color: #fff;
+	text-align: center;
+	p{
+	  margin:0;
+	}
+  }
+}

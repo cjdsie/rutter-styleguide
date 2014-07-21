@@ -1,0 +1,38 @@
+/************************
+****** Slabs *******
+**** Version: 0.0.1 *****
+*************************/
+
+.slab{
+  background: $rutter-light-grey;
+  padding: 0;
+  margin-bottom: 0;
+  display: block;
+  position: relative;
+  @include clearfix();
+  .container{
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    p{
+      text-align:left;
+      margin-bottom: $spacing;
+    }
+    .half{
+      @include column(6, 12);
+      padding: ($base-unit * 5) ($base-unit * 3);
+      &.image, &.video{
+        width: 50%;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+  &.light-grey{
+    background: lighten($rutter-light-grey, 20%);  
+  }
+  &.white{
+    background: $white;
+  }
+}

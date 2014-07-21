@@ -1,0 +1,351 @@
+*{
+  @include border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: $body-bg; 
+  height: 100%;
+  font-size: $base-font-size;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: $rutter-blue;
+  @include vendorize(text-size-adjust, $base-font-size);
+}
+
+body {
+  background: $white;
+  font-family: $body-font;
+  font-size: em(18);
+  line-height: (24 / $basefont);
+  color: $rutter-dk-grey;
+  font-weight: $regular;
+  -webkit-font-smoothing: $font-smoothing;
+  /* Fix for webkit rendering */
+  @include vendorize(text-size-adjust, $base-font-size);
+}
+
+
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dd,
+p,figure,
+pre,table,fieldset,hr {
+  margin-bottom: $spacing;
+}
+
+//
+// Icon Fonts
+//
+
+[class^="icon-"], [class*=" icon-"]{
+  &.circle{
+    border: 2px solid transparent;
+    border-radius: 100%;
+    padding: 0;
+    color: $default-link;
+    cursor: pointer;
+    @include transition(all, 0.2s linear);
+    &:hover{
+      @include vendorize(transform, scale(2, 2));
+      @include vendorize(transform-origin, center);
+	  padding: 2%;
+	  color: $rutter-dk-blue;
+      border: 2px solid $rutter-dk-blue;
+    } 
+  }
+}
+
+
+
+.full{
+  display: block;
+  padding-top: ($base-unit * 6);
+  @include clearfix();
+  @media(min-width: 65em){
+    width: 96%;
+  }
+}
+
+
+.half{
+  width: 100%;
+  display: block;
+  float: none;
+  border: 1px solid $rutter-light-grey;
+  border-radius: 1px;
+  height: 100%;
+  padding: ($base-unit * 3);
+  @media(min-width: 50em){
+    @include column(6);
+    float: none;
+    display: table-cell;
+    &:first-of-type {
+      border-right: none;
+    }
+  }
+  p {
+    margin-bottom: $spacing;
+  }
+  h4{
+    text-align: center;
+  }
+}
+
+.one-third{
+  width: 100%;
+  display: block;
+  float: none;
+  height: 100%;
+  @media(min-width: 50em){
+    @include column(4);
+    float:none;
+    display: table-cell;
+  }
+  h3{
+    text-align: center;
+  }
+}
+
+.full {
+  .half{
+    border: none;
+    float: left;
+  }
+}
+
+
+
+.product-intro{
+  text-align: center;
+}
+
+
+.manufacturing-intro{
+  display: block;
+  background: $white;
+  h3{
+    text-align: center;
+  }
+}
+
+
+/* ----------------------------------------------
+  Radar Solutions
+------------------------------------------------- */
+
+//
+// Product description
+//
+
+.product-description{
+  padding: ($base-unit * 6) 0;
+  display:block;
+  position: relative;
+  @include clearfix();
+  .container{
+    @include container;
+    p{
+      text-align: center;
+      @include center-block;
+    }
+  } 
+  h2, h3{
+    text-align: center;
+  }
+  .half{
+    h3{
+      text-align: left;
+    }
+    p {
+      text-align: left;
+    }
+  }
+  .product-description-callout{
+    display: block;
+    padding: ($base-unit * 6) 2% ($base-unit * 8);
+    @media(min-width: 50em){
+      display: table;
+
+    }
+   @media(min-width: 75em){
+     padding-left: 0;
+     padding-right: 0;
+   }
+  }
+}
+
+//
+// Product features
+//
+
+
+.features{
+  width: 100%;
+  display: block;
+  position: relative;
+  padding: ($base-unit * 8) 0;
+  background: lighten($rutter-light-grey, 20%);
+  @include clearfix();
+  .container{
+    @include container;
+    p{
+      text-align: center;
+      @include center-block;
+    }
+  }
+  h3{
+    text-align: center;
+  }
+  .full {
+    margin-bottom: ($base-unit * 8);
+  }
+  .features-list{
+    width: 100%;
+    display: block;
+    margin:0;
+    padding: 0;
+    margin-top: ($base-unit * 8);
+    @include clearfix();
+    .features-item{
+      width: 100%;
+      display: block;
+      margin-left: 0;
+      border-radius: 1px;
+      @media(min-width: 55em){
+        @include column(4); 
+        min-height: 430px;
+      }
+      @media(min-width: 58em){
+        min-height: 420px;
+      }
+      @media(min-width: 65em){
+        min-height: 380px;
+      }
+      h4 {
+        text-align: center;
+        font-weight: $semi-bold;
+      }
+      p {
+        text-align: left;
+      }
+      span{
+        display: block;
+        font-size: em(36);
+        text-align: center;
+        margin-bottom: ($base-unit * 4);
+        color: lighten($rutter-dk-grey, 30%);
+      }
+    }
+  }
+}
+
+
+//
+// Product Installs
+//   - This section includes fixed and scrolling panels. There is a small bug in the latest Chrome version. Not sure what it is needs 
+//     to be fixed.
+//
+
+#installations{
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  z-index: 10;
+  .container{
+    @include container;
+  }
+  .panel{
+    width: 100%;
+    float:none;
+    position: relative;
+    @media(min-width: 50em){
+      width: 50%;
+      float: left;
+    }
+  }
+  .fixed-panel{
+    position: relative;
+    width: 100%;
+    height: 650px;
+    @media(min-width: 50em){
+      width: 96%;
+      padding: 0 ($base-unit * 5);
+      @include center-block;
+      overflow: visible;
+    }
+    h3{
+      padding: ($base-unit * 10) 0 0;
+      color: $white;
+      text-align:center;
+    }
+    table {
+      background: rgba(0,0,0, .5);
+      color: $white;
+      thead th{
+        text-align: center;
+      }
+    }
+  }
+  .panel{
+    .scroll-panel{
+      padding: ($base-unit * 6) 0;
+      width: 96%;
+      @include center-block;
+      @media(min-width: 50em){
+        padding: ($base-unit * 10) 0 ($base-unit * 10) ($base-unit * 4.5);
+	    width: 90%;
+
+      }
+    }
+    h4{
+      text-align: center;
+    }
+    .map{
+      margin: ($base-unit * 6) 0;
+    }
+  }
+  .background-image{
+    @include vendorize(background-size, cover);
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    @media(min-width: 50em){
+      width: 50%;
+      height: 100%;
+    }
+    &.ice-navigator-bg-img{
+      background: url(../images/divider-image.jpg) no-repeat center center;
+      @include vendorize(background-size, cover);
+      height: 650px;
+      
+    }
+  }
+}
+
+
+
+.copyright{
+  background: $white;
+  width: 100%;
+  display:block;
+  position: relative;
+  padding: ($base-unit * 3);
+  vertical-align: middle;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, .15);
+  font-size: em(14);
+  img{
+    width: 30px;
+    height: 30px;
+    display: inline;
+    vertical-align: middle;
+    margin-right: ($base-unit * 2);
+  }
+  p{
+    display: inline;
+    vertical-align: middle;
+  }
+}

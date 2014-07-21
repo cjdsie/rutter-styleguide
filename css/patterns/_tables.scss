@@ -10,7 +10,7 @@ table {
     padding: .5em;
     vertical-align: top;
     border-top: 1px solid #8c9bab;
-    font-size: em(14);
+    @include font-size(14);
     line-height: 1.5;
     text-align: left;
   }
@@ -41,11 +41,6 @@ table {
         -ms-transition: background-color 0.25s 0 linear;
         -o-transition: background-color 0.25s 0 linear;
         transition: background-color 0.25s 0 linear;
-      }
-      &:hover {
-        td, th {
-          background-color: #a9b4c1;
-        }
       }
     }
   }

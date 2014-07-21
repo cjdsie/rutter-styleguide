@@ -20,29 +20,29 @@ Lists are necessary for any site. But they come in a variety of different forms.
 	    </div>
 		</details>
 		<div class="pattern-preview">
-		<ul class="thumbnail-list">
-			<li>
-				<div class="cutoff-image">
-					<img src="images/placeholder-image.jpg">
+			<div id="installations">
+				<div class="panel">
+			<ul class="thumbnail-list">
+				<li>
+					<div class="cutoff-image">
+						<img src="{{site.baseurl}}/images/ice-radar.jpg">
+					</div>
+					<p>Ice Navigator&trade; clearly differentiates between open water, ice pans, leads in the ice field and the thicker ice ridges.</p>	
+				</li>
+				<li>
+					<div class="cutoff-image">
+						<img src="{{site.baseurl}}/images/rigging.jpg">
+					</div>
+					<p>For operations such as offshore drilling or seismic data acquisition, knowing where the ice front is, and the nature of it, is critical.</p>
+				</li>
+				<li>
+					<div class="cutoff-image">
+						<img src="{{site.baseurl}}/images/shard-ice.jpg">
 				</div>
-				<h3>Sigma s6 Radar Processor</h3>
-				<p>Multi-layered processing removes the clutter that limits the clarity of conventional radar images by enhancing the outline of what needs to be seen.</p>
-			</li>
-			<li>
-				<div class="cutoff-image">
-					<img src="images/placeholder-image.jpg">
-				</div>
-				<h3>Sigma s6 Radar Processor</h3>
-				<p>Multi-layered processing removes the clutter that limits the clarity of conventional radar images by enhancing the outline of what needs to be seen.</p>
-			</li>
-			<li>
-				<div class="cutoff-image">
-					<img src="images/placeholder-image.jpg">
-				</div>
-				<h3>Sigma s6 Radar Processor</h3>
-				<p>Multi-layered processing removes the clutter that limits the clarity of conventional radar images by enhancing the outline of what needs to be seen.</p>
-			</li>
-		</ul>
+				<p>With <em>sigma</em> S6 technology it is possible to see the shadows of higher relief icebergs frozen in the pack ice.</p></li>
+			</ul>
+			</div>
+			</div>
 	</div>
 	</div>	
 	
@@ -146,55 +146,63 @@ Lists are necessary for any site. But they come in a variety of different forms.
   &lt;/li>
 &lt;/ul></code></pre>
 		<div class="usage">
-			<h4>Usage:</h4><p>This list style should be used when a picture is needed in the background and a short title is overlaid on top.</p>
+			<h4>Usage:</h4><p>This list is used on the homepage only as a quick navigation to the markets that Rutter is a part of.</p>
 		</div>
 		</details>
 		<div class="pattern-preview">
-		<ul class="thumbnail-listing">
-			<li>
-				<div class="cutoff-image">
-				 <img src="images/placeholder-service.jpg" alt="Placeholder Service">
-				</div>
-				<h4>Defence/Naval</h4>
-			</li>
-			<li>
-				<div class="cutoff-image">
-				 <img src="images/placeholder-service.jpg" alt="Placeholder Service">
-				</div>
-				<h4>Offshore Seismic</h4>
-			</li>
-			<li>
-				<div class="cutoff-image">
-				 <img src="images/placeholder-service.jpg" alt="Placeholder Service">
-				</div>
-				<h4>Defence/Naval</h4>
-			</li>
-			<li>
-				 <div class="cutoff-image">
-					 <img src="images/placeholder-service.jpg" alt="Placeholder Service">
-				</div>
-				<h4>Offshore Seismic</h4>
-			</li>
-			<li>
-				 <div class="cutoff-image">
-				 <img src="images/placeholder-service.jpg" alt="Placeholder Service">
-				</div>
-				<h4>Offshore Seismic</h4>
-			</li>
-			<li>
-				 <div class="cutoff-image">
-					 <img src="images/placeholder-service.jpg" alt="Placeholder Service">
-				</div>
-				<h4>Offshore Seismic</h4>
-			</li>
-			<li>
-				 <div class="cutoff-image">
-					 <img src="images/placeholder-service.jpg" alt="Placeholder Service">
-				</div>
-				<h4>Offshore Seismic</h4>
-			</li>
-		</ul>	
+			<div class="markets-list">
+					  <ul>
+					  	<li>
+						<a href="">
+							<img src="images/oilandgas2.png">
+							</a>
+						<h4>Oil &amp; Gas</h4>
+						</li>
+					  	<li><a href=""><img src="{{site.baseurl}}/images/shipping2.png"></a><h4>Shipping</h4></li>
+					  	<li><a href=""><img src="{{site.baseurl}}/images/offshore2.png"></a><h4>Offshore Seismic</h4></li>
+					  	<li><a href=""><img src="{{site.baseurl}}/images/cruise-ship2.png"></a><h4>Cruise Ships</h4></li>
+					  	<li><a href=""><img src="{{site.baseurl}}/images/coastal-monitoring.png"></a><h4>Coastal Monitoring</h4></li>
+					  	<li><a href=""><img src="{{site.baseurl}}/images/renewable-energy2.png"></a><h4>Renewable Energy</h4></li>
+					  	<li><a href=""><img src="{{site.baseurl}}/images/maritime-security.png"></a><h4>Maritime Security</h4></li>
+					  	<li><a href=""><img src="{{site.baseurl}}/images/port-security.png"></a><h4>Port Security</h4></li>
+					  </ul>	
+			</div>
 	</div>
 </div>
+
+<div class="pattern">
+		<details>
+			<summary>Services Lists</summary>
+			<pre><code class="language-markup">&lt;section class="solutions-full-list">
+   				&lt;div class="solutions-full-list">
+					&lt;div class="solutions-list">
+						&lt;a href="" class="active">&lt;h5>Ice Management&lt;/h5>&lt;/a>
+						&lt;a href="">&lt;h5>Oil Spill Detection&lt;/h5>&lt;/a>
+						&lt;a href="">&lt;h5>Small Target Surveillance&lt;/h5>&lt;/a>
+						&lt;a href="">&lt;h5>WaMoS &amp; Current Monitoring&lt;/h5>&lt;/a>
+						&lt;a href="">&lt;h5>SeaFusion&lt;/h5>&lt;/a>
+						&lt;a href="">&lt;h5>Command &amp; Control&lt;/h5>&lt;/a>
+						&lt;a href="">&lt;h5>Radar 100S6&lt;/h5>&lt;/a>
+					&lt;/div>	
+				&lt;/div></code></pre>
+		<div class="usage">
+			<h4>Usage:</h4><p>This list should be used before the footer on each of the radar solution pages. They are a quick navigation to other products.</p>
+		</div>
+		</details>
+		<div class="pattern-preview">
+	<div class="solutions-full-list">
+		<div class="solutions-list">
+			<a href="" class="active"><h5>Ice Management</h5></a>
+			<a href=""><h5>Oil Spill Detection</h5></a>
+			<a href=""><h5>Small Target Surveillance</h5></a>
+			<a href=""><h5>WaMoS &amp; Current Monitoring</h5></a>
+			<a href=""><h5>SeaFusion</h5></a>
+			<a href=""><h5>Command &amp; Control</h5></a>
+			<a href=""><h5>Radar 100S6</h5></a>
+		</div>	
+	</div>
+</div>
+	
+</div>	
 	
 </section>		

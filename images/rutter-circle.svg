@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="333px" height="334px" viewBox="0 0 333 334" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>rutter-cirlce</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Rutter_logo" sketch:type="MSLayerGroup" transform="translate(0.000000, 1.000000)">
+            <path d="M126.887,128.133 L206.051,128.133 L206.051,205.893 L126.887,205.893 L126.887,128.133 Z" id="Fill-1" fill="#EE3739" sketch:type="MSShapeGroup"></path>
+            <path d="M126.711,111.975 L323.696,111.975 C301.039,46.835 238.983,-0.123 166.293,-0.123 C156.389,-0.123 146.68,0.757 137.238,2.428 C137.003,2.476 136.762,2.519 136.524,2.561 C136.494,2.561 136.47,2.569 136.44,2.573 C136.236,2.611 136.029,2.653 135.821,2.693 C135.505,2.75 135.186,2.815 134.862,2.878 C132.119,3.411 129.408,4.007 126.711,4.672 L126.711,111.975" id="Fill-2" fill="#00A3DB" sketch:type="MSShapeGroup"></path>
+            <path d="M328.486,128.417 L221.478,128.417 L221.478,323.629 C286.257,300.781 332.887,238.904 332.887,166.471 C332.887,153.386 331.363,140.648 328.486,128.417" id="Fill-3" fill="#00A3DB" sketch:type="MSShapeGroup"></path>
+            <path d="M205.765,221.134 L8.946,221.134 C27.831,275.231 73.916,316.758 130.674,329.205 C141.957,331.567 153.635,332.828 165.6,332.828 C179.427,332.828 192.875,331.144 205.765,328.014 L205.765,221.134" id="Fill-4" fill="#00A3DB" sketch:type="MSShapeGroup"></path>
+            <path d="M111.03,206.164 L111.03,9.356 C46.48,32.311 0.048,94.052 0.048,166.31 C0.048,180.041 1.74,193.386 4.901,206.164 L111.03,206.164" id="Fill-5" fill="#00A3DB" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

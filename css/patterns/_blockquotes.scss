@@ -63,3 +63,15 @@ blockquote {
     }
   }
 }
+
+
+/*-----------------------------------------------
+  Testimonials
+------------------------------------------------- */
+
+.testimonial{
+  display: block;
+  width: 100%;
+  background: url(../images/blockquote/blockquote-placeholder.jpg) no-repeat center;
+  @include vendorize(background-size, cover);
+}

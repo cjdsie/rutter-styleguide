@@ -445,4 +445,25 @@ $imagePath:   "../img/" !default;
     background: url('../images/masks/photo-corner.svg');
     background-position: -50px bottom;
   }
+  img{
+    vertical-align:text-bottom;
+  }
+}
+
+
+/* Container mixin
+================================== */
+
+@mixin container {
+  position: relative;
+  height: 100%;
+  max-width: 1134px;
+  width: 96%;
+  margin: 0;
+  @include center-block;
+  padding: ($base-unit * 4) 0;
+  @include clearfix();
+  @media(min-width: 65em){
+    width: auto;
+  }
 }

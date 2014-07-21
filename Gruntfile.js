@@ -43,15 +43,6 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		concat: {
-			options: {
-				separator: ';'
-			},
-			js: {
-				src: ['js/plugins.min.js'],
-				dest: 'js/pattern.min.js'
-			}
-		},
 		watch: {
 			files: [
 			'/*',
@@ -70,6 +61,6 @@ grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-watch');
 
-grunt.registerTask('default', ['sass', 'uglify', 'concat', 'jshint', 'cssmin']);
-grunt.registerTask('watch', ['sass', 'uglify', 'concat', 'jshint', 'cssmin']);
+grunt.registerTask('default', ['sass', 'uglify', 'jshint', 'cssmin']);
+grunt.registerTask('watch', ['sass', 'uglify', 'jshint', 'cssmin']);
 };

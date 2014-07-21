@@ -83,31 +83,45 @@ ul.large li, li p {
 }
 
 
+//
+// Thumbnail lists - use anytime you need a list with a thumbnail
+//
+
 .thumbnail-list{
-  margin-left: 0;
+  margin: 0;
   padding: 0;
-  width: inherit;
+  @include clearfix();
   li {
-    border-top: 1px solid $rutter-light-grey;
-    padding: ($base-unit * 4) 0 $base-unit;
+    padding: 0 0 $base-unit;
     @include clearfix();
+    margin-bottom: ($base-unit * 6);
     &:first-of-type{
       padding-top: 0;
       border-top:none;
     }
     div{
-      float: none;
+      float: left;
+      margin-bottom: ($base-unit * 4); 
+      width: 30%;
+      margin-right: ($base-unit * 2);
+      margin-bottom: 0;
       @media(min-width: 55em) {
         float: left;
         margin-right: ($base-unit * 4);
+        margin-bottom: 0;
       }
     }
-    h3{
+    h4{
+      text-align: left;
       margin-bottom: ($base-unit * 2);
     }
   }
 }
 
+
+//
+// Custom Ordered List - These include stylized numbering.
+//
 
 ol{
   counter-reset: li;
@@ -138,6 +152,10 @@ ol{
   }
 }
 
+
+//
+// Event Lists - A specialized style for the event listing pages.
+//
 
 .event-listing{
   margin-left: 0;
@@ -265,6 +283,11 @@ ol{
 }
 
 
+//
+// Thumbnail lists - use anytime you need a list with a thumbnail
+// THIS STYLE SHOULD NOT BE USED. NEW VERSION COMING
+//
+
 .thumbnail-listing{
   width: 100%;
   margin:0;
@@ -287,7 +310,7 @@ ol{
 		bottom: 0;
 		left: 0;
 		right: 0;
-		background: rgba(0,0,0, 0.5);
+		background: rgba(0,0,0, 0.23);
 		-moz-transition: background .3s linear;
 		-webkit-transition: background .3s linear;
 		-o-transition: background .3s linear;
@@ -300,14 +323,119 @@ ol{
     }
     img{
       position: relative;
+      display: block;
+      width: 100%;
     }
-    h4{
+    h3{
       @include abs-pos(auto,0,0,auto);
       color: $white;
       text-transform: none;
       margin:0;
       padding-right: 5%;
       z-index: 10;
+    }
+  }
+}
+
+
+//
+// Solutions Lists - These are found at the bottom of the product solutions. There should always be seven.
+// Include an active link setting.
+//
+
+.solutions-full-list{
+  display: block;
+  width: 100%;
+  border-top: 1px solid $rutter-light-grey; 
+  .solutions-list{
+    display: block;
+    float: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid $rutter-light-grey;
+    @media(min-width: 55em){
+      display: table;
+    }
+    a{
+      display: block;
+      width: 100%;
+      padding: ($base-unit * 3) ($base-unit * 3);
+      text-align: center;
+      vertical-align: middle;
+      overflow: hidden;
+      @include transition(all 0.3s);
+      @media(min-width: 55em){
+        display: table-cell;
+        width: 14%;
+        border-right: 1px solid lighten($rutter-light-grey, 17%);
+      }
+      h5{
+        margin-bottom: 0;
+        font-weight: $regular;
+      }
+      &:last-of-type{
+        border: none;
+      }
+      &:hover{
+        background: lighten($default-link, 40%);
+        text-decoration: none;
+        h5{
+          color: $white;
+        }
+      }
+      &:active, &.active{
+        background: lighten($rutter-light-grey, 17%);
+        text-decoration: none;
+        box-shadow: inset 0px 0px 8px rgba(0,0,0,.15);
+        h5{
+          color: $rutter-dk-grey;
+        }
+      }
+    }
+    
+  }
+}
+
+
+.markets-list{
+  width: 100%;
+  background: $white;
+  position: relative;
+  @include clearfix();
+  h3 {
+    text-align: center;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    @media(min-width: 75em){
+      display: table;
+      width:100%;
+    }
+
+    li {
+      @include column(4);
+      text-align: center;
+      margin-bottom: ($base-unit * 2);
+      h4{
+        font-size: 60%;
+      }
+
+      @media(min-width: 55em) {
+          h4{
+	        font-size: 100%;
+	      }
+      }
+      @media(min-width: 75em){
+        @include column(1.5);
+        display: table-cell;
+      }
+      img{
+        width: 60px;
+        height: 60px;
+        @include center-block;
+        margin-bottom: ($base-unit * 2);
+      }
     }
   }
 }

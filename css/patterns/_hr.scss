@@ -2,9 +2,10 @@
 --------------------------------------------------*/
 
 hr {
-  border: solid #ddd;
+  border: solid $rutter-light-grey;
   border-width: 1px 0 0;
   clear: both;
-  margin: .625em 0 1.875em;
+  margin: .625em auto 1.875em;
   height: 0;
+  width: 120px;
 }

@@ -1,3 +1,7 @@
 name: Rutter Pattern Portfolio
-markdown: redcarpet
-pygments: true
+baseurl: ""
+url: "http://cjdsie.github.io/rutter-styleguide"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
